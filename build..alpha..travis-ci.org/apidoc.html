@@ -1,0 +1,1652 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/bjrmatos/electron-workers"
+
+    >electron-workers (v1.10.1)</a>
+</h1>
+<h4>Run electron scripts in managed workers</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-workers">module electron-workers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.electron-workers">
+            function <span class="apidocSignatureSpan"></span>electron-workers
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronManager">
+            function <span class="apidocSignatureSpan">electron-workers.</span>ElectronManager
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker">
+            function <span class="apidocSignatureSpan">electron-workers.</span>ElectronWorker
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-workers.</span>ElectronManager.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-workers.</span>ElectronWorker.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-workers.ElectronManager">module electron-workers.ElectronManager</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronManager.ElectronManager">
+            function <span class="apidocSignatureSpan">electron-workers.</span>ElectronManager
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-workers.ElectronManager.prototype">module electron-workers.ElectronManager.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronManager.prototype._executeInWorker">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>_executeInWorker
+            <span class="apidocSignatureSpan">(worker, data, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronManager.prototype._manageTaskEndInWorker">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>_manageTaskEndInWorker
+            <span class="apidocSignatureSpan">(worker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronManager.prototype._manageTaskStartInWorker">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>_manageTaskStartInWorker
+            <span class="apidocSignatureSpan">(worker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronManager.prototype.execute">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>execute
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronManager.prototype.kill">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>kill
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronManager.prototype.start">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronManager.prototype.tryFlushQueue">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>tryFlushQueue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-workers.ElectronWorker">module electron-workers.ElectronWorker</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker.ElectronWorker">
+            function <span class="apidocSignatureSpan">electron-workers.</span>ElectronWorker
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-workers.ElectronWorker.prototype">module electron-workers.ElectronWorker.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker.prototype.checkAlive">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>checkAlive
+            <span class="apidocSignatureSpan">(cb, shot)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker.prototype.execute">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>execute
+            <span class="apidocSignatureSpan">(data, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker.prototype.kill">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>kill
+            <span class="apidocSignatureSpan">(hardKill)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker.prototype.onWorkerProcessError">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>onWorkerProcessError
+            <span class="apidocSignatureSpan">(workerProcessErr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker.prototype.onWorkerProcessExitTryToRecyle">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>onWorkerProcessExitTryToRecyle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker.prototype.onWorkerProcessIpcMessage">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>onWorkerProcessIpcMessage
+            <span class="apidocSignatureSpan">(payload)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker.prototype.recycle">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>recycle
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-workers.ElectronWorker.prototype.start">
+            function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>start
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-workers" id="apidoc.module.electron-workers">module electron-workers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.electron-workers" id="apidoc.element.electron-workers.electron-workers">
+        function <span class="apidocSignatureSpan"></span>electron-workers
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function electronManager(options) {
+  return createManager(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronManager" id="apidoc.element.electron-workers.ElectronManager">
+        function <span class="apidocSignatureSpan">electron-workers.</span>ElectronManager
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ElectronManager() {
+  var options = arguments.length &#x3c;= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+  _classCallCheck(this, ElectronManager);
+
+  _EventEmitter.call(this);
+
+  var instance = this;
+
+  this._electronInstances = [];
+  this._electronInstancesTasksCount = {};
+  this.options = _extends({}, options);
+  this.options.connectionMode = this.options.connectionMode || &#x27;server&#x27;;
+  this.options.electronArgs = this.options.electronArgs || [];
+  this.options.pathToElectron = this.options.pathToElectron || getElectronPath();
+  this.options.numberOfWorkers = this.options.numberOfWorkers || numCPUs;
+  this.options.maxConcurrencyPerWorker = this.options.maxConcurrencyPerWorker || Infinity;
+  this.options.timeout = this.options.timeout || 10000;
+  this.options.host = this.options.host || &#x27;localhost&#x27;;
+  this.options.hostEnvVarName = this.options.hostEnvVarName || &#x27;ELECTRON_WORKER_HOST&#x27;;
+  this.options.portEnvVarName = this.options.portEnvVarName || &#x27;ELECTRON_WORKER_PORT&#x27;;
+  this._timeouts = [];
+  this.tasksQueue = [];
+
+  if (isNaN(this.options.maxConcurrencyPerWorker) || typeof this.options.maxConcurrencyPerWorker !== &#x27;number&#x27;) {
+    throw new Error(&#x27;`maxConcurrencyPerWorker` option must be a number&#x27;);
+  }
+
+  if (this.options.maxConcurrencyPerWorker &#x3c;= 0) {
+    throw new Error(&#x27;`maxConcurrencyPerWorker` option must be greater than 0&#x27;);
+  }
+
+  function processExitHandler() {
+    debugManager(&#x27;process exit: trying to kill workers..&#x27;);
+    instance.kill();
+  }
+
+  this._processExitHandler = processExitHandler;
+
+  process.once(&#x27;exit&#x27;, processExitHandler);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker" id="apidoc.element.electron-workers.ElectronWorker">
+        function <span class="apidocSignatureSpan">electron-workers.</span>ElectronWorker
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ElectronWorker(options) {
+  _classCallCheck(this, ElectronWorker);
+
+  _EventEmitter.call(this);
+
+  this.options = options;
+  this.firstStart = false;
+  this.shouldRevive = false;
+  this.exit = false;
+  this.isBusy = false;
+  this.isRecycling = false;
+  this.id = _uuid2[&#x27;default&#x27;].v1();
+  this._hardKill = false;
+  this._earlyError = false;
+  this._taskCallback = {};
+
+  this.onWorkerProcessError = this.onWorkerProcessError.bind(this);
+  this.onWorkerProcessExitTryToRecyle = this.onWorkerProcessExitTryToRecyle.bind(this);
+  this.onWorkerProcessIpcMessage = this.onWorkerProcessIpcMessage.bind(this);
+
+  if (options.connectionMode === &#x27;ipc&#x27;) {
+    this.findFreePort = function (cb) {
+      cb(null);
+    };
+  } else {
+    if (options.portLeftBoundary &#x26;&#x26; options.portRightBoundary) {
+      this.findFreePort = function (cb) {
+        findFreePortInRange(options.host, options.portLeftBoundary, options.portRightBoundary, cb);
+      };
+    } else {
+      this.findFreePort = function (cb) {
+        findFreePort(options.host, cb);
+      };
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-workers.ElectronManager" id="apidoc.module.electron-workers.ElectronManager">module electron-workers.ElectronManager</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronManager.ElectronManager" id="apidoc.element.electron-workers.ElectronManager.ElectronManager">
+        function <span class="apidocSignatureSpan">electron-workers.</span>ElectronManager
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ElectronManager() {
+  var options = arguments.length &#x3c;= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+  _classCallCheck(this, ElectronManager);
+
+  _EventEmitter.call(this);
+
+  var instance = this;
+
+  this._electronInstances = [];
+  this._electronInstancesTasksCount = {};
+  this.options = _extends({}, options);
+  this.options.connectionMode = this.options.connectionMode || &#x27;server&#x27;;
+  this.options.electronArgs = this.options.electronArgs || [];
+  this.options.pathToElectron = this.options.pathToElectron || getElectronPath();
+  this.options.numberOfWorkers = this.options.numberOfWorkers || numCPUs;
+  this.options.maxConcurrencyPerWorker = this.options.maxConcurrencyPerWorker || Infinity;
+  this.options.timeout = this.options.timeout || 10000;
+  this.options.host = this.options.host || &#x27;localhost&#x27;;
+  this.options.hostEnvVarName = this.options.hostEnvVarName || &#x27;ELECTRON_WORKER_HOST&#x27;;
+  this.options.portEnvVarName = this.options.portEnvVarName || &#x27;ELECTRON_WORKER_PORT&#x27;;
+  this._timeouts = [];
+  this.tasksQueue = [];
+
+  if (isNaN(this.options.maxConcurrencyPerWorker) || typeof this.options.maxConcurrencyPerWorker !== &#x27;number&#x27;) {
+    throw new Error(&#x27;`maxConcurrencyPerWorker` option must be a number&#x27;);
+  }
+
+  if (this.options.maxConcurrencyPerWorker &#x3c;= 0) {
+    throw new Error(&#x27;`maxConcurrencyPerWorker` option must be greater than 0&#x27;);
+  }
+
+  function processExitHandler() {
+    debugManager(&#x27;process exit: trying to kill workers..&#x27;);
+    instance.kill();
+  }
+
+  this._processExitHandler = processExitHandler;
+
+  process.once(&#x27;exit&#x27;, processExitHandler);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-workers.ElectronManager.prototype" id="apidoc.module.electron-workers.ElectronManager.prototype">module electron-workers.ElectronManager.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronManager.prototype._executeInWorker" id="apidoc.element.electron-workers.ElectronManager.prototype._executeInWorker">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>_executeInWorker
+        <span class="apidocSignatureSpan">(worker, data, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _executeInWorker(worker, data, options, cb) {
+  var _this2 = this;
+
+  if (options === undefined) options = {};
+
+  var workerTimeout = undefined;
+
+  if (options.timeout != null) {
+    workerTimeout = options.timeout;
+  } else {
+    workerTimeout = this.options.timeout;
+  }
+
+  if (worker.shouldRevive) {
+    debugManager(&#x27;trying to revive worker [&#x27; + worker.id + &#x27;]..&#x27;);
+
+    worker.start(function (startErr) {
+      if (startErr) {
+        debugManager(&#x27;worker [&#x27; + worker.id + &#x27;] could not revive..&#x27;);
+        _this2.tryFlushQueue();
+        return cb(startErr);
+      }
+
+      debugManager(&#x27;worker [&#x27; + worker.id + &#x27;] has revived..&#x27;);
+      executeTask.call(_this2);
+    });
+  } else {
+    executeTask.call(this);
+  }
+
+  function executeTask() {
+    var _this3 = this;
+
+    var isDone = false;
+
+    var timeoutId = setTimeout(function () {
+      _this3._timeouts.splice(_this3._timeouts.indexOf(timeoutId), 1);
+
+      if (isDone) {
+        return;
+      }
+
+      debugManager(&#x27;task timeout in worker [&#x27; + worker.id + &#x27;] has been reached..&#x27;);
+
+      isDone = true;
+
+      _this3._manageTaskEndInWorker(worker);
+
+      _this3.emit(&#x27;workerTimeout&#x27;, worker);
+
+      var error = new Error();
+      error.workerTimeout = true;
+      error.message = &#x27;Worker Timeout, the worker process does not respond after &#x27; + workerTimeout + &#x27; ms&#x27;;
+      cb(error);
+
+      _this3.tryFlushQueue();
+    }, workerTimeout);
+
+    debugManager(&#x27;executing task in worker [&#x27; + worker.id + &#x27;] with timeout:&#x27;, workerTimeout);
+
+    this._timeouts.push(timeoutId);
+
+    worker.execute(data, function (err, result) {
+      if (isDone) {
+        return;
+      }
+
+      _this3._manageTaskEndInWorker(worker);
+
+      // clear timeout
+      _this3._timeouts.splice(_this3._timeouts.indexOf(timeoutId), 1);
+      clearTimeout(timeoutId);
+
+      if (err) {
+        debugManager(&#x27;task has failed in worker [&#x27; + worker.id + &#x27;]..&#x27;);
+        _this3.tryFlushQueue();
+        cb(err);
+        return;
+      }
+
+      isDone = true;
+      debugManager(&#x27;task executed correctly in worker [&#x27; + worker.id + &#x27;]..&#x27;);
+      _this3.tryFlushQueue();
+      cb(null, result);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (availableWorkerInstanceIndex !== -1) {
+  availableWorkerInstance = this._electronInstances.splice(availableWorkerInstanceIndex, 1)[0];
+
+  this._manageTaskStartInWorker(availableWorkerInstance);
+
+  debugManager(&#x27;worker [&#x27; + availableWorkerInstance.id + &#x27;] has been choosen for the task..&#x27;);
+
+  this.<span class="apidocCodeKeywordSpan">_executeInWorker</span>(availableWorkerInstance, data, options, cb);
+  // ..and then the worker we have used becomes the last item in the list
+  this._electronInstances.push(availableWorkerInstance);
+  return;
+}
+
+debugManager(&#x27;no workers available, storing the task for later processing..&#x27;);
+// if no available worker save task for later processing
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronManager.prototype._manageTaskEndInWorker" id="apidoc.element.electron-workers.ElectronManager.prototype._manageTaskEndInWorker">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>_manageTaskEndInWorker
+        <span class="apidocSignatureSpan">(worker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _manageTaskEndInWorker(worker) {
+  var maxConcurrencyPerWorker = this.options.maxConcurrencyPerWorker;
+
+  if (this._electronInstancesTasksCount[worker.id] == null) {
+    this._electronInstancesTasksCount[worker.id] = 0;
+  }
+
+  if (this._electronInstancesTasksCount[worker.id] &#x3e; 0) {
+    this._electronInstancesTasksCount[worker.id]--;
+  }
+
+  if (this._electronInstancesTasksCount[worker.id] &#x3c; maxConcurrencyPerWorker) {
+    worker.isBusy = false; // eslint-disable-line no-param-reassign
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return;
+}
+
+debugManager(&#x27;task timeout in worker [&#x27; + worker.id + &#x27;] has been reached..&#x27;);
+
+isDone = true;
+
+_this3.<span class="apidocCodeKeywordSpan">_manageTaskEndInWorker</span>(worker);
+
+_this3.emit(&#x27;workerTimeout&#x27;, worker);
+
+var error = new Error();
+error.workerTimeout = true;
+error.message = &#x27;Worker Timeout, the worker process does not respond after &#x27; + workerTimeout + &#x27; ms&#x27;;
+cb(error);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronManager.prototype._manageTaskStartInWorker" id="apidoc.element.electron-workers.ElectronManager.prototype._manageTaskStartInWorker">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>_manageTaskStartInWorker
+        <span class="apidocSignatureSpan">(worker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _manageTaskStartInWorker(worker) {
+  var maxConcurrencyPerWorker = this.options.maxConcurrencyPerWorker;
+
+  if (this._electronInstancesTasksCount[worker.id] == null) {
+    this._electronInstancesTasksCount[worker.id] = 0;
+  }
+
+  if (this._electronInstancesTasksCount[worker.id] &#x3c; maxConcurrencyPerWorker) {
+    this._electronInstancesTasksCount[worker.id]++;
+  }
+
+  // &#x22;equality check&#x22; is just enough here but we apply the &#x22;greater than&#x22; check just in case..
+  if (this._electronInstancesTasksCount[worker.id] &#x3e;= maxConcurrencyPerWorker) {
+    worker.isBusy = true; // eslint-disable-line no-param-reassign
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    availableWorkerInstanceIndex = _lodashFindindex2[&#x27;default&#x27;](this._electronInstances, {
+isBusy: false
+    });
+
+    if (availableWorkerInstanceIndex !== -1) {
+availableWorkerInstance = this._electronInstances.splice(availableWorkerInstanceIndex, 1)[0];
+
+this.<span class="apidocCodeKeywordSpan">_manageTaskStartInWorker</span>(availableWorkerInstance);
+
+debugManager(&#x27;worker [&#x27; + availableWorkerInstance.id + &#x27;] has been choosen for the task..&#x27;);
+
+this._executeInWorker(availableWorkerInstance, data, options, cb);
+// ..and then the worker we have used becomes the last item in the list
+this._electronInstances.push(availableWorkerInstance);
+return;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronManager.prototype.execute" id="apidoc.element.electron-workers.ElectronManager.prototype.execute">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>execute
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function execute(data) {
+  var availableWorkerInstanceIndex = undefined,
+      availableWorkerInstance = undefined,
+      options = undefined,
+      cb = undefined;
+
+  for (var _len = arguments.length, args = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  if (args.length &#x3e; 1) {
+    options = args[0];
+    cb = args[1];
+  } else {
+    cb = args[0];
+  }
+
+  debugManager(&#x27;getting new task..&#x27;);
+
+  // simple round robin balancer across workers
+  // on each execute, get the first available worker from the list...
+  availableWorkerInstanceIndex = _lodashFindindex2[&#x27;default&#x27;](this._electronInstances, {
+    isBusy: false
+  });
+
+  if (availableWorkerInstanceIndex !== -1) {
+    availableWorkerInstance = this._electronInstances.splice(availableWorkerInstanceIndex, 1)[0];
+
+    this._manageTaskStartInWorker(availableWorkerInstance);
+
+    debugManager(&#x27;worker [&#x27; + availableWorkerInstance.id + &#x27;] has been choosen for the task..&#x27;);
+
+    this._executeInWorker(availableWorkerInstance, data, options, cb);
+    // ..and then the worker we have used becomes the last item in the list
+    this._electronInstances.push(availableWorkerInstance);
+    return;
+  }
+
+  debugManager(&#x27;no workers available, storing the task for later processing..&#x27;);
+  // if no available worker save task for later processing
+  this.tasksQueue.push({ data: data, options: options, cb: cb });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+electronWorkers.start(function(startErr) {
+if (startErr) {
+  return console.error(startErr);
+}
+
+// `electronWorkers` will send your data in a POST request to your electron script
+electronWorkers.<span class="apidocCodeKeywordSpan">execute</span>({ someData: &#x27;someData&#x27; }, function(err, data) {
+  if (err) {
+    return console.error(err);
+  }
+
+  console.log(JSON.stringify(data)); // { someData: &#x27;someData&#x27; }
+  electronWorkers.kill(); // kill all workers explicitly
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronManager.prototype.kill" id="apidoc.element.electron-workers.ElectronManager.prototype.kill">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>kill
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function kill() {
+  debugManager(&#x27;killing all workers..&#x27;);
+
+  this._timeouts.forEach(function (tId) {
+    clearTimeout(tId);
+  });
+
+  this._electronInstances.forEach(function (workerInstance) {
+    workerInstance.kill(true);
+  });
+
+  process.removeListener(&#x27;exit&#x27;, this._processExitHandler);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // `electronWorkers` will send your data in a POST request to your electron script
+  electronWorkers.execute({ someData: &#x27;someData&#x27; }, function(err, data) {
+    if (err) {
+      return console.error(err);
+    }
+
+    console.log(JSON.stringify(data)); // { someData: &#x27;someData&#x27; }
+    electronWorkers.<span class="apidocCodeKeywordSpan">kill</span>(); // kill all workers explicitly
+  });
+});
+```
+
+### How to use ipc mode
+
+1.- First create an electron script
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronManager.prototype.start" id="apidoc.element.electron-workers.ElectronManager.prototype.start">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start(cb) {
+  var _this = this;
+
+  var started = 0;
+  var workerErrors = [];
+  var _options = this.options;
+  var numberOfWorkers = _options.numberOfWorkers;
+  var connectionMode = _options.connectionMode;
+  var couldNotStartWorkersErr = undefined;
+
+  if (connectionMode !== &#x27;server&#x27; &#x26;&#x26; connectionMode !== &#x27;ipc&#x27;) {
+    return cb(new Error(&#x27;invalid connection mode: &#x27; + connectionMode));
+  }
+
+  debugManager(&#x27;starting &#x27; + numberOfWorkers + &#x27; worker(s), mode: &#x27; + connectionMode + &#x27;..&#x27;);
+
+  function startHandler(err) {
+    if (err) {
+      workerErrors.push(err);
+    }
+
+    started++;
+
+    if (started === numberOfWorkers) {
+      if (workerErrors.length) {
+        couldNotStartWorkersErr = new Error(&#x27;electron manager could not start all workers..&#x27;);
+        couldNotStartWorkersErr.workerErrors = workerErrors;
+        debugManager(&#x27;electron manager could not start all workers..&#x27;);
+        return cb(couldNotStartWorkersErr);
+      }
+
+      debugManager(&#x27;all workers started correctly&#x27;);
+      cb(null);
+    }
+  }
+
+  var _loop = function (ix) {
+    var workerPortLeftBoundary = _this.options.portLeftBoundary,
+        workerOptions = undefined,
+        workerInstance = undefined;
+
+    // prevent that workers start with the same left boundary
+    if (workerPortLeftBoundary != null) {
+      workerPortLeftBoundary += ix;
+    }
+
+    workerOptions = {
+      debug: _this.options.debug,
+      debugBrk: _this.options.debugBrk,
+      env: _this.options.env,
+      stdio: _this.options.stdio,
+      connectionMode: _this.options.connectionMode,
+      killSignal: _this.options.killSignal,
+      electronArgs: _this.options.electronArgs,
+      pathToElectron: _this.options.pathToElectron,
+      pathToScript: _this.options.pathToScript,
+      hostEnvVarName: _this.options.hostEnvVarName,
+      portEnvVarName: _this.options.portEnvVarName,
+      host: _this.options.host,
+      portLeftBoundary: workerPortLeftBoundary,
+      portRightBoundary: _this.options.portRightBoundary
+    };
+
+    debugManager(&#x27;creating worker &#x27; + (ix + 1) + &#x27; with options:&#x27;, workerOptions);
+    workerInstance = new _ElectronWorker2[&#x27;default&#x27;](workerOptions);
+
+    workerInstance.on(&#x27;processCreated&#x27;, function () {
+      _this.emit(&#x27;workerProcessCreated&#x27;, workerInstance, workerInstance._childProcess);
+    });
+
+    workerInstance.on(&#x27;recycling&#x27;, function () {
+      if (_this._electronInstancesTasksCount[workerInstance.id] != null) {
+        _this._electronInstancesTasksCount[workerInstance.id] = 0;
+      }
+
+      _this.emit(&#x27;workerRecycling&#x27;, workerInstance);
+    });
+
+    workerInstance.on(&#x27;recyclingError&#x27;, function () {
+      _this.emit(&#x27;workerRecyclingError&#x27;, workerInstance);
+      _this.tryFlushQueue();
+    });
+
+    workerInstance.on(&#x27;recycled&#x27;, function () {
+      _this.emit(&#x27;workerRecycled&#x27;, workerInstance);
+      _this.tryFlushQueue();
+    });
+
+    workerInstance.on(&#x27;kill&#x27;, function () {
+      if (_this._electronInstancesTasksCount[workerInstance.id] != null) {
+        _this._electronInstancesTasksCount[workerInstance.id] = 0;
+      }
+    });
+
+    _this._electronInstances.push(workerInstance);
+    _this._electronInstancesTasksCount[workerInstance.id] = 0;
+
+    _this._electronInstances[ix].start(startHandler);
+  };
+
+  for (var ix = 0; ix &#x3c; numberOfWorkers; ix++) {
+    _loop(ix);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var electronWorkers = require(&#x27;electron-workers&#x27;)({
+connectionMode: &#x27;server&#x27;,
+pathToScript: &#x27;script.js&#x27;,
+timeout: 5000,
+numberOfWorkers: 5
+});
+
+electronWorkers.<span class="apidocCodeKeywordSpan">start</span>(function(startErr) {
+if (startErr) {
+  return console.error(startErr);
+}
+
+// `electronWorkers` will send your data in a POST request to your electron script
+electronWorkers.execute({ someData: &#x27;someData&#x27; }, function(err, data) {
+  if (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronManager.prototype.tryFlushQueue" id="apidoc.element.electron-workers.ElectronManager.prototype.tryFlushQueue">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronManager.prototype.</span>tryFlushQueue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function tryFlushQueue() {
+  var availableWorkerInstanceIndex = undefined,
+      availableWorkerInstance = undefined,
+      task = undefined;
+
+  debugManager(&#x27;trying to flush queue of pending tasks..&#x27;);
+
+  if (this.tasksQueue.length === 0) {
+    debugManager(&#x27;there is no pending tasks..&#x27;);
+    return;
+  }
+
+  // simple round robin balancer across workers
+  // get the first available worker from the list...
+  availableWorkerInstanceIndex = _lodashFindindex2[&#x27;default&#x27;](this._electronInstances, {
+    isBusy: false
+  });
+
+  if (availableWorkerInstanceIndex === -1) {
+    debugManager(&#x27;no workers available to process pending task..&#x27;);
+    return;
+  }
+
+  task = this.tasksQueue.shift();
+  availableWorkerInstance = this._electronInstances.splice(availableWorkerInstanceIndex, 1)[0];
+
+  this._manageTaskStartInWorker(availableWorkerInstance);
+
+  debugManager(&#x27;worker [&#x27; + availableWorkerInstance.id + &#x27;] has been choosen for process pending task..&#x27;);
+
+  this._executeInWorker(availableWorkerInstance, task.data, task.options, task.cb);
+  // ..and then the worker we have used becomes the last item in the list
+  this._electronInstances.push(availableWorkerInstance);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  _this.emit(&#x27;workerRecycling&#x27;, workerInstance);
+});
+
+workerInstance.on(&#x27;recyclingError&#x27;, function () {
+  _this.emit(&#x27;workerRecyclingError&#x27;, workerInstance);
+  _this.<span class="apidocCodeKeywordSpan">tryFlushQueue</span>();
+});
+
+workerInstance.on(&#x27;recycled&#x27;, function () {
+  _this.emit(&#x27;workerRecycled&#x27;, workerInstance);
+  _this.tryFlushQueue();
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-workers.ElectronWorker" id="apidoc.module.electron-workers.ElectronWorker">module electron-workers.ElectronWorker</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker.ElectronWorker" id="apidoc.element.electron-workers.ElectronWorker.ElectronWorker">
+        function <span class="apidocSignatureSpan">electron-workers.</span>ElectronWorker
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ElectronWorker(options) {
+  _classCallCheck(this, ElectronWorker);
+
+  _EventEmitter.call(this);
+
+  this.options = options;
+  this.firstStart = false;
+  this.shouldRevive = false;
+  this.exit = false;
+  this.isBusy = false;
+  this.isRecycling = false;
+  this.id = _uuid2[&#x27;default&#x27;].v1();
+  this._hardKill = false;
+  this._earlyError = false;
+  this._taskCallback = {};
+
+  this.onWorkerProcessError = this.onWorkerProcessError.bind(this);
+  this.onWorkerProcessExitTryToRecyle = this.onWorkerProcessExitTryToRecyle.bind(this);
+  this.onWorkerProcessIpcMessage = this.onWorkerProcessIpcMessage.bind(this);
+
+  if (options.connectionMode === &#x27;ipc&#x27;) {
+    this.findFreePort = function (cb) {
+      cb(null);
+    };
+  } else {
+    if (options.portLeftBoundary &#x26;&#x26; options.portRightBoundary) {
+      this.findFreePort = function (cb) {
+        findFreePortInRange(options.host, options.portLeftBoundary, options.portRightBoundary, cb);
+      };
+    } else {
+      this.findFreePort = function (cb) {
+        findFreePort(options.host, cb);
+      };
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-workers.ElectronWorker.prototype" id="apidoc.module.electron-workers.ElectronWorker.prototype">module electron-workers.ElectronWorker.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker.prototype.checkAlive" id="apidoc.element.electron-workers.ElectronWorker.prototype.checkAlive">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>checkAlive
+        <span class="apidocSignatureSpan">(cb, shot)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkAlive(cb, shot) {
+  var shotCount = shot || 1,
+      connectionMode = this.options.connectionMode;
+
+  function statusHandler(err, statusWorker) {
+    var _this3 = this;
+
+    if (!err &#x26;&#x26; statusWorker === &#x27;open&#x27;) {
+      return cb();
+    }
+
+    if (connectionMode === &#x27;server&#x27; &#x26;&#x26; shotCount &#x3e; 50) {
+      return cb(new Error(&#x27;Unable to reach electron worker - mode: &#x27; + connectionMode));
+    }
+
+    if (connectionMode === &#x27;ipc&#x27; &#x26;&#x26; err) {
+      return cb(err);
+    }
+
+    shotCount++;
+
+    // re-try check
+    if (connectionMode === &#x27;server&#x27;) {
+      setTimeout(function () {
+        _this3.checkAlive(cb, shotCount);
+      }, 100);
+    }
+  }
+
+  if (connectionMode === &#x27;server&#x27;) {
+    _checkPortStatus2[&#x27;default&#x27;](this.port, this.options.host, statusHandler.bind(this));
+  } else if (connectionMode === &#x27;ipc&#x27;) {
+    _checkIpcStatus2[&#x27;default&#x27;](this._childProcess, statusHandler.bind(this));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (_this2._childProcess == null) {
+debugWorker(&#x27;There is no child process for worker [&#x27; + _this2.id + &#x27;]..&#x27;);
+return cb(new Error(&#x27;There is no child process for worker&#x27;));
+        }
+
+        debugWorker(&#x27;checking if worker [&#x27; + _this2.id + &#x27;] is alive..&#x27;);
+
+        _this2.<span class="apidocCodeKeywordSpan">checkAlive</span>(function (checkAliveErr) {
+if (isDone) {
+  return;
+}
+
+if (checkAliveErr) {
+  debugWorker(&#x27;worker [&#x27; + _this2.id + &#x27;] is not alive..&#x27;);
+  return cb(checkAliveErr);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker.prototype.execute" id="apidoc.element.electron-workers.ElectronWorker.prototype.execute">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>execute
+        <span class="apidocSignatureSpan">(data, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function execute(data, cb) {
+  var _this4 = this;
+
+  var connectionMode = this.options.connectionMode,
+      httpOpts = undefined,
+      req = undefined,
+      json = undefined,
+      taskId = undefined;
+
+  debugWorker(&#x27;new task for worker [&#x27; + this.id + &#x27;]..&#x27;);
+
+  this.emit(&#x27;task&#x27;);
+
+  if (this._hardKill) {
+    debugWorker(&#x27;task execution stopped because worker [&#x27; + this.id + &#x27;] was killed by the user..&#x27;);
+    return;
+  }
+
+  if (connectionMode === &#x27;ipc&#x27;) {
+    debugWorker(&#x27;creating ipc task message for worker [&#x27; + this.id + &#x27;]..&#x27;);
+
+    taskId = _uuid2[&#x27;default&#x27;].v1();
+
+    this._taskCallback[taskId] = function () {
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this4.emit(&#x27;taskEnd&#x27;);
+      cb.apply(undefined, args);
+    };
+
+    return this._childProcess.send({
+      workerEvent: &#x27;task&#x27;,
+      taskId: taskId,
+      payload: data
+    });
+  }
+
+  debugWorker(&#x27;creating request for worker [&#x27; + this.id + &#x27;]..&#x27;);
+
+  httpOpts = {
+    hostname: this.options.host,
+    port: this.port,
+    path: &#x27;/&#x27;,
+    method: &#x27;POST&#x27;
+  };
+
+  req = _http2[&#x27;default&#x27;].request(httpOpts, function (res) {
+    var result = &#x27;&#x27;;
+
+    res.on(&#x27;data&#x27;, function (chunk) {
+      result += chunk;
+    });
+
+    res.on(&#x27;end&#x27;, function () {
+      var responseData = undefined;
+
+      debugWorker(&#x27;request in worker [&#x27; + _this4.id + &#x27;] has ended..&#x27;);
+
+      _this4.emit(&#x27;taskEnd&#x27;);
+
+      try {
+        debugWorker(&#x27;trying to parse worker [&#x27; + _this4.id + &#x27;] response..&#x27;);
+        responseData = result ? JSON.parse(result) : null;
+      } catch (err) {
+        debugWorker(&#x27;couldn\&#x27;t parse response for worker [&#x27; + _this4.id + &#x27;]..&#x27;);
+        return cb(err);
+      }
+
+      debugWorker(&#x27;response has been parsed correctly for worker [&#x27; + _this4.id + &#x27;]..&#x27;);
+      cb(null, responseData);
+    });
+  });
+
+  req.setHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
+  json = JSON.stringify(data);
+  req.setHeader(&#x27;Content-Length&#x27;, Buffer.byteLength(json));
+
+  debugWorker(&#x27;trying to communicate with worker [&#x27; + this.id + &#x27;], request options:&#x27;, httpOpts, &#x27;data:&#x27;, json);
+
+  req.write(json);
+
+  req.on(&#x27;error&#x27;, function (err) {
+    debugWorker(&#x27;error when trying to communicate with worker [&#x27; + _this4.id + &#x27;]..&#x27;);
+    cb(err);
+  });
+
+  req.end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+electronWorkers.start(function(startErr) {
+if (startErr) {
+  return console.error(startErr);
+}
+
+// `electronWorkers` will send your data in a POST request to your electron script
+electronWorkers.<span class="apidocCodeKeywordSpan">execute</span>({ someData: &#x27;someData&#x27; }, function(err, data) {
+  if (err) {
+    return console.error(err);
+  }
+
+  console.log(JSON.stringify(data)); // { someData: &#x27;someData&#x27; }
+  electronWorkers.kill(); // kill all workers explicitly
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker.prototype.kill" id="apidoc.element.electron-workers.ElectronWorker.prototype.kill">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>kill
+        <span class="apidocSignatureSpan">(hardKill)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function kill(hardKill) {
+  var connectionMode = this.options.connectionMode;
+
+  debugWorker(&#x27;killing worker [&#x27; + this.id + &#x27;]..&#x27;);
+
+  this.emit(&#x27;kill&#x27;);
+
+  this._hardKill = Boolean(hardKill);
+
+  if (this._childProcess) {
+    if (this._childProcess.connected) {
+      debugWorker(&#x27;closing ipc connection - worker [&#x27; + this.id + &#x27;]..&#x27;);
+      this._childProcess.disconnect();
+    }
+
+    // clean previous listeners
+    if (this._handleSpawnError) {
+      this._childProcess.removeListener(&#x27;error&#x27;, this._handleSpawnError);
+    }
+
+    this._childProcess.removeListener(&#x27;error&#x27;, this.onWorkerProcessError);
+    this._childProcess.removeListener(&#x27;exit&#x27;, this.onWorkerProcessExitTryToRecyle);
+
+    if (connectionMode === &#x27;ipc&#x27;) {
+      this._childProcess.removeListener(&#x27;message&#x27;, this.onWorkerProcessIpcMessage);
+    }
+
+    // guard against closing a process that has been closed before
+    if (!this.exit) {
+      if (this.options.killSignal) {
+        debugWorker(&#x27;killing worker [&#x27; + this.id + &#x27;] with custom signal:&#x27;, this.options.killSignal);
+        this._childProcess.kill(this.options.killSignal);
+      } else {
+        this._childProcess.kill();
+      }
+
+      if (!hardKill) {
+        this.onWorkerProcessExitTryToRecyle();
+      }
+    }
+
+    this._childProcess = undefined;
+  } else {
+    debugWorker(&#x27;there is no child process to kill - worker [&#x27; + this.id + &#x27;]&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // `electronWorkers` will send your data in a POST request to your electron script
+  electronWorkers.execute({ someData: &#x27;someData&#x27; }, function(err, data) {
+    if (err) {
+      return console.error(err);
+    }
+
+    console.log(JSON.stringify(data)); // { someData: &#x27;someData&#x27; }
+    electronWorkers.<span class="apidocCodeKeywordSpan">kill</span>(); // kill all workers explicitly
+  });
+});
+```
+
+### How to use ipc mode
+
+1.- First create an electron script
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker.prototype.onWorkerProcessError" id="apidoc.element.electron-workers.ElectronWorker.prototype.onWorkerProcessError">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>onWorkerProcessError
+        <span class="apidocSignatureSpan">(workerProcessErr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onWorkerProcessError(workerProcessErr) {
+  debugWorker(&#x27;worker [&#x27; + this.id + &#x27;] electron process error callback: &#x27; + workerProcessErr.message);
+
+  // don&#x27;t handle early errors (errors between spawning the process and the first checkAlive call) in this handler
+  if (this._earlyError) {
+    debugWorker(&#x27;worker [&#x27; + this.id + &#x27;] ignoring error because it was handled previously (early): &#x27; + workerProcessErr.message
+);
+    return;
+  }
+
+  // try revive the process when an error is received,
+  // note that could not be spawn errors are not handled here..
+  if (this.firstStart &#x26;&#x26; !this.isRecycling &#x26;&#x26; !this.shouldRevive) {
+    debugWorker(&#x27;worker [&#x27; + this.id + &#x27;] the process will be revived because an error: &#x27; + workerProcessErr.message);
+    this.shouldRevive = true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker.prototype.onWorkerProcessExitTryToRecyle" id="apidoc.element.electron-workers.ElectronWorker.prototype.onWorkerProcessExitTryToRecyle">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>onWorkerProcessExitTryToRecyle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onWorkerProcessExitTryToRecyle() {
+  var _this = this;
+
+  debugWorker(&#x27;worker [&#x27; + this.id + &#x27;] onWorkerProcessExitTryToRecyle callback..&#x27;);
+
+  // we only recycle the process on exit and if it is not in the middle
+  // of another recycling
+  if (this.firstStart &#x26;&#x26; !this.isRecycling) {
+    debugWorker(&#x27;trying to recycle worker [&#x27; + this.id + &#x27;], reason: process exit..&#x27;);
+
+    this.exit = true;
+    this.firstStart = false;
+
+    this.recycle(function () {
+      _this.exit = false;
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      debugWorker(&#x27;killing worker [&#x27; + this.id + &#x27;] with custom signal:&#x27;, this.options.killSignal);
+      this._childProcess.kill(this.options.killSignal);
+    } else {
+      this._childProcess.kill();
+    }
+
+    if (!hardKill) {
+      this.<span class="apidocCodeKeywordSpan">onWorkerProcessExitTryToRecyle</span>();
+    }
+  }
+
+  this._childProcess = undefined;
+} else {
+  debugWorker(&#x27;there is no child process to kill - worker [&#x27; + this.id + &#x27;]&#x27;);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker.prototype.onWorkerProcessIpcMessage" id="apidoc.element.electron-workers.ElectronWorker.prototype.onWorkerProcessIpcMessage">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>onWorkerProcessIpcMessage
+        <span class="apidocSignatureSpan">(payload)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function onWorkerProcessIpcMessage(payload) {
+  var callback = undefined,
+      responseData = undefined;
+
+  if (payload &#x26;&#x26; payload.workerEvent === &#x27;taskResponse&#x27;) {
+    debugWorker(&#x27;task in worker [&#x27; + this.id + &#x27;] has ended..&#x27;);
+
+    callback = this._taskCallback[payload.taskId];
+    responseData = payload.response;
+
+    if (!callback || typeof callback !== &#x27;function&#x27;) {
+      debugWorker(&#x27;worker [&#x27; + this.id + &#x27;] - callback registered for the task\&#x27;s response (&#x27; + payload.taskId + &#x27;) is not a function
+&#x27;);
+      return;
+    }
+
+    if (payload.error) {
+      return callback(new Error(payload.error.message || &#x27;An error has occurred when trying to process the task&#x27;));
+    }
+
+    callback(null, responseData);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker.prototype.recycle" id="apidoc.element.electron-workers.ElectronWorker.prototype.recycle">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>recycle
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function recycle() {
+  var _this5 = this;
+
+  var cb = undefined,
+      revive = undefined;
+
+  debugWorker(&#x27;recycling worker [&#x27; + this.id + &#x27;]..&#x27;);
+
+  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &#x3c; _len2; _key2++) {
+    args[_key2] = arguments[_key2];
+  }
+
+  if (args.length &#x3c; 2) {
+    cb = args[0];
+    revive = true;
+  } else {
+    cb = args[1];
+    revive = args[0];
+  }
+
+  if (this._childProcess) {
+    this.isRecycling = true;
+    // mark worker as busy before recycling
+    this.isBusy = true;
+
+    this.emit(&#x27;recycling&#x27;);
+
+    if (this._hardKill) {
+      debugWorker(&#x27;recycling was stopped because worker [&#x27; + this.id + &#x27;] was killed by the user..&#x27;);
+      return;
+    }
+
+    this.kill();
+
+    debugWorker(&#x27;trying to re-start child process for worker [&#x27; + this.id + &#x27;]..&#x27;);
+
+    this.start(function (startErr) {
+      _this5.isRecycling = false;
+      // mark worker as free after recycling
+      _this5.isBusy = false;
+
+      // if there is a error on worker recycling, revive it on next execute
+      if (startErr) {
+        _this5.shouldRevive = Boolean(revive);
+
+        debugWorker(&#x27;couldn\&#x27;t recycle worker [&#x27; + _this5.id + &#x27;], should revive: &#x27; + _this5.shouldRevive);
+
+        cb(startErr);
+        _this5.emit(&#x27;recyclingError&#x27;, startErr);
+        return;
+      }
+
+      debugWorker(&#x27;worker [&#x27; + _this5.id + &#x27;] has been recycled..&#x27;);
+
+      _this5.shouldRevive = false;
+
+      cb();
+
+      _this5.emit(&#x27;recycled&#x27;);
+    });
+  } else {
+    debugWorker(&#x27;there is no child process to recycle - worker [&#x27; + this.id + &#x27;]&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // of another recycling
+  if (this.firstStart &#x26;&#x26; !this.isRecycling) {
+    debugWorker(&#x27;trying to recycle worker [&#x27; + this.id + &#x27;], reason: process exit..&#x27;);
+
+    this.exit = true;
+    this.firstStart = false;
+
+    this.<span class="apidocCodeKeywordSpan">recycle</span>(function () {
+      _this.exit = false;
+    });
+  }
+};
+
+ElectronWorker.prototype.onWorkerProcessIpcMessage = function onWorkerProcessIpcMessage(payload) {
+  var callback = undefined,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-workers.ElectronWorker.prototype.start" id="apidoc.element.electron-workers.ElectronWorker.prototype.start">
+        function <span class="apidocSignatureSpan">electron-workers.ElectronWorker.prototype.</span>start
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function start(cb) {
+  var _this2 = this;
+
+  var isDone = false;
+
+  if (!isValidConnectionMode(this.options.connectionMode)) {
+    return cb(new Error(&#x27;invalid connection mode: &#x27; + this.options.connectionMode));
+  }
+
+  debugWorker(&#x27;starting worker [&#x27; + this.id + &#x27;]..&#x27;);
+
+  this.findFreePort(function (err, port) {
+    var childArgs = undefined,
+        childOpts = undefined;
+
+    var _options = _this2.options;
+    var electronArgs = _options.electronArgs;
+    var pathToElectron = _options.pathToElectron;
+    var pathToScript = _options.pathToScript;
+    var hostEnvVarName = _options.hostEnvVarName;
+    var portEnvVarName = _options.portEnvVarName;
+    var host = _options.host;
+    var debug = _options.debug;
+    var debugBrk = _options.debugBrk;
+    var env = _options.env;
+    var stdio = _options.stdio;
+    var connectionMode = _options.connectionMode;
+
+    if (!env) {
+      env = {};
+    }
+
+    childArgs = electronArgs.slice();
+    childArgs.unshift(pathToScript);
+
+    if (debugBrk != null) {
+      childArgs.unshift(&#x27;--debug-brk=&#x27; + debugBrk);
+    } else if (debug != null) {
+      childArgs.unshift(&#x27;--debug=&#x27; + debug);
+    }
+
+    if (err) {
+      debugWorker(&#x27;couldn\&#x27;t find free port for worker [&#x27; + _this2.id + &#x27;]..&#x27;);
+      return cb(err);
+    }
+
+    _this2.port = port;
+
+    childOpts = {
+      env: _extends({}, env, {
+        ELECTRON_WORKER_ID: _this2.id,
+        // propagate the DISPLAY env var to make it work on LINUX
+        DISPLAY: process.env.DISPLAY
+      })
+    };
+
+    // we send host and port as env vars to child process in server mode
+    if (connectionMode === &#x27;server&#x27;) {
+      childOpts.stdio = &#x27;pipe&#x27;;
+      childOpts.env[hostEnvVarName] = host;
+      childOpts.env[portEnvVarName] = port;
+    } else if (connectionMode === &#x27;ipc&#x27;) {
+      childOpts.stdio = [&#x27;pipe&#x27;, &#x27;pipe&#x27;, &#x27;pipe&#x27;, &#x27;ipc&#x27;];
+    }
+
+    if (stdio != null) {
+      childOpts.stdio = stdio;
+    }
+
+    debugWorker(&#x27;spawning process for worker [&#x27; + _this2.id + &#x27;] with args:&#x27;, childArgs, &#x27;and options:&#x27;, childOpts);
+
+    _this2._childProcess = _child_process2[&#x27;default&#x27;].spawn(pathToElectron, childArgs, childOpts);
+
+    // ipc connection is required for ipc mode
+    if (connectionMode === &#x27;ipc&#x27; &#x26;&#x26; !_this2._childProcess.send) {
+      return cb(new Error(&#x27;ipc mode requires a ipc connection, if you\&#x27;re using stdio option make sure you are setting up ipc&#x27;));
+    }
+
+    _this2._handleSpawnError = function (spawnError) {
+      debugWorker(&#x27;worker [&#x27; + this.id + &#x27;] spawn error callback..&#x27;);
+
+      if (!this.firstStart) {
+        isDone = true;
+        this._earlyError = true;
+        debugWorker(&#x27;worker [&#x27; + this.id + &#x27;] start was canceled because an early error: &#x27; + spawnError.message);
+        cb(spawnError);
+      }
+    };
+
+    _this2._handleSpawnError = _this2._handleSpawnError.bind(_this2);
+
+    _this2._childProcess.once(&#x27;error&#x27;, _this2._handleSpawnError);
+
+    _this2._childProcess.on(&#x27;error&#x27;, _this2.onWorkerProcessError);
+
+    _this2._childProcess.on(&#x27;exit&#x27;, _this2.onWorkerProcessExitTryToRecyle);
+
+    if (connectionMode === &#x27;ipc&#x27;) {
+      _this2._childProcess.on(&#x27;message&#x27;, _this2.onWorkerProcessIpcMessage);
+    }
+
+    _this2.emit(&#x27;processCreated&#x27;);
+
+    setImmediate(function () {
+      // the workers were killed explicitly by the user
+      if (_this2._hardKill || isDone) {
+        return;
+      }
+
+      if (_this2._childProcess == null) {
+        debugWorker(&#x27;There is no child process for worker [&#x27; + _this2.id + &#x27;]..&#x27;);
+        return cb(new Error(&#x27;There is no child process for worker&#x27;));
+      }
+
+      debugWorker(&#x27;checking if worker [&#x27; + _this2.id + &#x27;] is alive..&#x27;);
+
+      _this2.checkAlive(function (checkAliveErr) {
+        if (isDone) {
+          return;
+        }
+
+        if (checkAliveErr) {
+          debugWorker(&#x27;worker [&#x27; + _this2.id + &#x27;] is not alive..&#x27;);
+          return cb(checkAliveErr);
+        }
+
+        _this2._earlyError = false;
+        _this2._childProcess.removeListener(&#x27;error&#x27;, _this2._handleSpawnError);
+
+        if (!_this2.firstStart) {
+          _this2.firstStart = true;
+        }
+
+        debugWorker(&#x27;worker [&#x27; + _this2.id + &#x27;] ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var electronWorkers = require(&#x27;electron-workers&#x27;)({
+connectionMode: &#x27;server&#x27;,
+pathToScript: &#x27;script.js&#x27;,
+timeout: 5000,
+numberOfWorkers: 5
+});
+
+electronWorkers.<span class="apidocCodeKeywordSpan">start</span>(function(startErr) {
+if (startErr) {
+  return console.error(startErr);
+}
+
+// `electronWorkers` will send your data in a POST request to your electron script
+electronWorkers.execute({ someData: &#x27;someData&#x27; }, function(err, data) {
+  if (err) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
